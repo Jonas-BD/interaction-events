@@ -10,8 +10,12 @@ const mySubButton = document.getElementById('subtractButton');
 
 
 // skriv din eventhandler kode her ---------------------------------------
-myAddButton.addEventListener('click', addValue);
-mySubButton.addEventListener('click', subtractValue);
+myAddButton.addEventListener('click', function() {
+    addValue();
+})
+mySubButton.addEventListener('click', function() {
+    subtractValue();
+})
 
 
 
