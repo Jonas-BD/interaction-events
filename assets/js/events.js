@@ -10,7 +10,8 @@ const mySubButton = document.getElementById('subtractButton');
 
 
 // skriv din eventhandler kode her ---------------------------------------
-
+myAddButton.addEventListener('click', addValue);
+mySubButton.addEventListener('click', subtractValue);
 
 
 
@@ -49,7 +50,11 @@ const diceButton = document.getElementById('rollDiceOne');
     showResult(diceRoll, myDiceRes) */
 
 // skriv din eventhandler kode her ---------------------------------------
-
+diceButton.addEventListener('click', () => {
+    let diceRoll = getRandomNumber(1, 6); // Skal umiddelbart være getRandomNumber(1, 7), før man også kan slå 6'ere
+    showResult(diceRoll, myDiceRes)
+    console.log(diceRoll)
+})
 
 
 
@@ -69,7 +74,9 @@ const myLiveText = document.getElementById('myLiveText');
 let myLiveTextResult = document.getElementById('tasteResult');
 
 // skriv din eventhandler kode her ---------------------------------------
-
+myLiveText.addEventListener('keyup', () => {
+    showResult(myLiveText.value, myLiveTextResult)
+})
 
 
 
